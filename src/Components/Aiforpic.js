@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios";
 
-
 const Aiforpic = () => {
 
   const [img,setImg] = useState("https://www.freeiconspng.com/uploads/blue-up-file-circle-document-upload-icon-23.png") 
@@ -19,7 +18,6 @@ const Aiforpic = () => {
               console.log(reader.result)
               // convert image file to base64 
               setImg(reader.result)
-            
             }
             
           }
@@ -43,8 +41,6 @@ const Aiforpic = () => {
         uploaddata.append('Objects',null);
         uploaddata.append('Success',false);
         uploaddata.append('Time',null);
-        uploaddata.append('Lat',null);
-        uploaddata.append('Lng',null);
         // uploaddata.append('Boxespic',null);
         //why Img.name is error?
         // for (var pair of uploaddata.entries()) {
@@ -107,7 +103,10 @@ const Aiforpic = () => {
             </label>
           </div>
           <div className="img-holder">
-            <img src={img} alt="preview"/>
+            <img src={img} alt="preview"
+            />
+
+
           </div>
           <div className="img-holder">
             <img src={picresult} alt="picresult"/>
